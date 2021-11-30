@@ -13,4 +13,10 @@ class Image extends Model
     {
         return $this->morphTo();
     }
+
+    public function getPhoto($val)
+    {
+        return ($val !== null) ? asset('assets/images/article/' . $val) : "";
+
+    }
 }

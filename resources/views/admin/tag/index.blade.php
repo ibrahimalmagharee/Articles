@@ -260,6 +260,51 @@
 
             });
 
+            $(document).on('click', '.changeStatus', function (e) {
+                e.preventDefault();
+
+                var status = $(this).data('status');
+                var tag_id = $(this).data('id');
+
+                $.ajax({
+                    type: 'post',
+                    url: "{{ route('changeStatus.tag') }}",
+                    data: {'tag_id': tag_id, 'status': status},
+                    dataType: 'json',
+
+                    success: function (data) {
+                        if (data.status == true){
+                            toastr.success(data.msg);
+                            if (data.tag_status == 1) {
+                                $('#activate_'+tag_id).addClass('display');
+                                $('#activate_'+tag_id).removeClass('hidden');
+                                $('#activate_'+tag_id).attr('data-status', data.tag_status);
+                                $('#deactivate_'+tag_id).attr('data-status', data.tag_status);
+                                $('#deactivate_'+tag_id).addClass('hidden');
+
+
+
+                            } else if(data.tag_status == 0) {
+                                $('#activate_'+tag_id).addClass('hidden');
+                                $('#deactivate_'+tag_id).addClass('display');
+                                $('#deactivate_'+tag_id).removeClass('hidden');
+                                $('#activate_'+tag_id).attr('data-status', data.tag_status);
+                                $('#deactivate_'+tag_id).attr('data-status', data.tag_status);
+
+
+
+
+                            }
+                        }
+
+
+
+                    },
+
+
+                });
+            });
+
             //Delete
 
             $('body').on('click', '.deleteTag', function () {

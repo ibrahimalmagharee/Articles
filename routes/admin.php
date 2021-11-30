@@ -24,6 +24,8 @@ use Illuminate\Support\Facades\Route;
         Route::group(['prefix' => 'profile'], function (){
             Route::get('edit', 'ProfileController@edit')->name('edit.profile');
             Route::put('update', 'ProfileController@update')->name('update.profile');
+            Route::get('change-password', 'ProfileController@changePassword')->name('changePassword.profile');
+            Route::post('update-password', 'ProfileController@updatePassword')->name('updatePassword.profile');
         });
 
         ######################### End Profile Routes #############################################################
@@ -37,11 +39,10 @@ use Illuminate\Support\Facades\Route;
             Route::post('save', 'ArticleController@store')->name('save.article');
             Route::get('edit/{id}', 'ArticleController@edit')->name('edit.article');
             Route::post('update/{id}', 'ArticleController@update')->name('update.article');
+            Route::post('change-status', 'ArticleController@changeStatus')->name('changeStatus.article');
             Route::get('delete/{id}', 'ArticleController@destroy')->name('delete.article');
 
-            Route::get('add-article-images/{slug}', 'ArticleController@addArticleImages')->name('add.article.images');
             Route::post('save-images-inFolder', 'ArticleController@saveImagesOfArticleInFolder')->name('save.images.inFolder');
-            Route::post('save-images-inDB', 'ArticleController@saveImagesOfArticleInDB')->name('save.images.inDB');
             Route::get('delete-image', 'ArticleController@deleteImagesOfArticle')->name('delete.image');
             Route::post('remove-image', 'ProductController@removeImagesOfProductFromFolder')->name('delete.image.fromFolder');
 
@@ -56,6 +57,7 @@ use Illuminate\Support\Facades\Route;
             Route::post('save', 'TagController@store')->name('save.tag');
             Route::get('edit/{id}', 'TagController@edit')->name('edit.tag');
             Route::post('update/{id}', 'TagController@update')->name('update.tag');
+            Route::post('change-status', 'TagController@changeStatus')->name('changeStatus.tag');
             Route::get('delete/{id}', 'TagController@destroy')->name('delete.tag');
 
         });

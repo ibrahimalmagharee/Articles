@@ -20,7 +20,19 @@ class TagController extends Controller
                 ->addIndexColumn()
 
                 ->addColumn('status', function ($row) {
-                    return $row->status == 1 ? 'Active' : 'Not Active';
+                    $class = '';
+                    $class1 = '';
+                    if ($row->status == 0) {
+                        $class1 = 'hidden';
+
+                    } else {
+                        $class = 'hidden';
+                    }
+
+                    return $status = '<td>
+                        <a href="javascript:void(0)"  data-toggle="tooltip" data-status="' . $row->status . '"  data-id="' . $row->id . '" id="deactivate_' . $row->id . '"  class="btn btn-info box-shadow-3 mb-1 '.$class.' changeStatus" style="width: 95px">Deactivate</a>
+                        <a href="javascript:void(0)"  data-toggle="tooltip" data-status="' . $row->status . '"  data-id="' . $row->id . '" id="activate_' . $row->id . '"  class="btn btn-warning box-shadow-3 mb-1 '.$class1.' changeStatus" style="width: 80px">Activate</a>
+                        </td>';
                 })
 
                 ->addColumn('action', function ($row) {
@@ -118,6 +130,28 @@ class TagController extends Controller
 
 
         return redirect()->route('index.tags')->with($notification);
+    }
+
+    public function changeStatus (Request $request)
+    {
+        $status = $request->status;
+        $tag = Tag::where('id', request('tag_id'))->first();
+        if ($request->status == 0){
+            $status = 1;
+        }elseif ($request->status == 1) {
+            $status = 0;
+        }
+
+        $tag->where('id', request('tag_id'))->update([
+            'status' => $status
+        ]);
+
+
+        return response()->json([
+            'status' => true ,
+            'tag_status' => $status ,
+            'msg' => 'Tag status updated successfully'
+        ]);
     }
 
     public function destroy($id)

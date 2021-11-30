@@ -26,7 +26,6 @@ class ProfileRequest extends FormRequest
         return [
             'name' => 'required',
             'email' => 'required|email|unique:admins,email,'. $this -> id,
-            'password' => 'nullable|confirmed|min:8',
             'image' => 'required_without:id|mimes:jpg,jpeg,png',
         ];
     }
@@ -34,14 +33,12 @@ class ProfileRequest extends FormRequest
     public function messages()
     {
         return[
-            'name.required' => __('admin/dashboard.name.required'),
-            'email.required' => __('admin/dashboard.email.required'),
-            'email.email' => __('admin/dashboard.email.email'),
-            'email.unique' => __('admin/dashboard.email.unique'),
-            'password.confirmed' => __('admin/dashboard.password.confirmed'),
-            'password.min' => __('admin/dashboard.password.min'),
-            'image.required_without' => __('admin/dashboard.image.required_without'),
-            'image.mimes' => __('admin/dashboard.image.mimes'),
+            'name.required' => 'The name field is required',
+            'email.required' => 'The email field is required',
+            'email.email' => 'Please Check The Email Formula Entry',
+            'email.unique' => 'This Email Is Existed. Please Check Your Email Entry',
+            'image.required_without' => 'The image field is required',
+            'image.mimes' => 'The photo should be in jpg, jpeg, png format',
         ];
 
     }

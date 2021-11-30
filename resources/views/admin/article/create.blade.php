@@ -112,7 +112,7 @@
                                                             <label for="projectinput2"> Tags </label>
                                                             <select name="tags[]" id="parent_id"
                                                                     class="select2 form-control"
-                                                                    multiple>
+                                                                    multiple style="position: relative; width: 100%">
                                                                 <optgroup label="Please Choose The Appropriate Tag">
 
                                                                     @isset($tags)

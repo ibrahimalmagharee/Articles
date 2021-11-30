@@ -47,7 +47,8 @@
                                                 <th>Title</th>
                                                 <th>Slug</th>
                                                 <th>Short Description</th>
-                                                <th>Image</th>
+                                                <th>Status</th>
+{{--                                                <th>Image</th>--}}
                                                 <th>Process</th>
 
                                             </tr>
@@ -122,12 +123,57 @@
                     {data: 'title', name: 'title'},
                     {data: 'slug', name: 'slug'},
                     {data: 'short_description', name: 'short_description'},
-                    {data: 'photo', name: 'photo'},
+                    {data: 'status', name: 'status'},
                     {data: 'action', name: 'action', orderable: false, searchable: false},
                 ],
 
             });
 
+
+            $(document).on('click', '.changeStatus', function (e) {
+                e.preventDefault();
+
+                var status = $(this).data('status');
+                var article_id = $(this).data('id');
+
+                $.ajax({
+                    type: 'post',
+                    url: "{{ route('changeStatus.article') }}",
+                    data: {'article_id': article_id, 'status': status},
+                    dataType: 'json',
+
+                    success: function (data) {
+                        if (data.status == true){
+                            toastr.success(data.msg);
+                            if (data.article_status == 1) {
+                                $('#published_'+article_id).addClass('display');
+                                $('#published_'+article_id).removeClass('hidden');
+                                $('#published_'+article_id).attr('data-status', data.article_status);
+                                $('#un_published_'+article_id).attr('data-status', data.article_status);
+                                $('#un_published_'+article_id).addClass('hidden');
+
+
+
+                            } else if(data.article_status == 0) {
+                                $('#published_'+article_id).addClass('hidden');
+                                $('#un_published_'+article_id).addClass('display');
+                                $('#un_published_'+article_id).removeClass('hidden');
+                                $('#published_'+article_id).attr('data-status', data.article_status);
+                                $('#un_published_'+article_id).attr('data-status', data.article_status);
+
+
+
+
+                            }
+                        }
+
+
+
+                    },
+
+
+                });
+            });
 
 
 

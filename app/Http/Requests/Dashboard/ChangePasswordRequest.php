@@ -4,7 +4,7 @@ namespace App\Http\Requests\Dashboard;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class ImageRequest extends FormRequest
+class ChangePasswordRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,17 +24,19 @@ class ImageRequest extends FormRequest
     public function rules()
     {
         return [
-            'article_id' => 'required|exists:articles,id',
-            'images' => 'required_without:id',
-            'images.*' => 'string',
+            'old_password' => 'required',
+            'password' => 'required|confirmed|min:4',
         ];
     }
 
     public function messages()
     {
-        return [
-            'images.required_without' => __('admin/dashboard.images_required_without'),
-            'images.string' => __('admin/dashboard.images_string'),
+        return[
+            'old_password.required' => 'The old password field is required',
+            'password.required' => 'The password field is required',
+            'password.min' => 'The password must be at least 4 characters long',
+            'password.confirmed' => 'The password does not match, please check it',
         ];
+
     }
 }

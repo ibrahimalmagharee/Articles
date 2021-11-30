@@ -9,8 +9,8 @@
                 <li class="nav-item">
                     <a class="navbar-brand" href="{{route('admin.dashboard')}}">
                         <img class="brand-logo" alt="modern admin logo"
-                             src="{{asset('assets/admin/images/logo/logo.png')}}">
-                        <h3 class="brand-text">Article</h3>
+                             src="{{asset('assets/admin/images/logo/logo2.png')}}">
+                        <h3 class="brand-text">Article Medium</h3>
                     </a>
                 </li>
                 <li class="nav-item d-md-none">
@@ -24,8 +24,7 @@
                 <ul class="nav navbar-nav mr-auto float-left">
                     <li class="nav-item d-none d-md-block"><a class="nav-link nav-menu-main menu-toggle hidden-xs"
                                                               href="#"><i class="ft-menu"></i></a></li>
-                    <li class="nav-item d-none d-md-block"><a class="nav-link nav-link-expand" href="#"><i
-                                class="ficon ft-maximize"></i></a></li>
+
                 </ul>
                 <ul class="nav navbar-nav float-right">
                     <li class="dropdown dropdown-user nav-item">
@@ -38,12 +37,20 @@
                   <img style="height: 35px; width: 35px" src="{{auth('admin') -> user()->getImage(auth('admin') -> user()->image)}}"
                        alt="avatar"><i></i></span>
                         </a>
-                        <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item" href="{{route('edit.profile')}}"><i
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a class="dropdown-item" href="{{route('edit.profile')}}"><i
                                     class="ft-user"></i>Edit Profile </a>
+
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="{{route('admin.logout')}}"><i class="ft-power"></i>
                                 Logout
                                  </a>
+
+                            <div class="dropdown-divider"></div>
+
+                            <a class="dropdown-item" href="{{route('changePassword.profile')}}"><i class="la la-key"></i>
+                                Change Password
+                            </a>
                         </div>
                     </li>
 

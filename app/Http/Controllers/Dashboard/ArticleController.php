@@ -16,28 +16,45 @@ class ArticleController extends Controller
 {
     public function index(Request $request)
     {
-        $articles = Article::all();
+        $articles = Article::orderBy('id', 'DESC')->get();
 
         if ($request->ajax()) {
 
             return DataTables::of($articles)
                 ->addIndexColumn()
 
-                ->editColumn('tags', function ($row){
-                    return \GuzzleHttp\json_decode($row->tags->map(function ($tag){
-                        return $tag->name;
-                    }));
+
+                ->editColumn('title', function ($row){
+                    return Str::limit($row->title, 40);
+
+                })
+
+                ->editColumn('slug', function ($row){
+                    return Str::limit($row->slug, 40);
+
                 })
 
                 ->editColumn('short_description', function ($row){
-                    return Str::limit($row->short_description, 50);
+                    return Str::limit($row->short_description, 40);
 
                 })
 
-                ->addColumn('photo', function ($row){
-                    return '<img src="' . $row->getPhoto($row->images[0]->photo) . '" border="0" style="width: 100px; height: 90px;" class="img-rounded" align="center" />';
+                ->addColumn('status', function ($row) {
+                    $class = '';
+                    $class1 = '';
+                    if ($row->status == 0) {
+                        $class1 = 'hidden';
 
+                    } else {
+                        $class = 'hidden';
+                    }
+
+                    return $status = '<td>
+                        <a href="javascript:void(0)"  data-toggle="tooltip" data-status="' . $row->status . '"  data-id="' . $row->id . '" id="un_published_' . $row->id . '"  class="btn btn-info box-shadow-3 mb-1 '.$class.' changeStatus" style="width: 100px">Unpublished</a>
+                        <a href="javascript:void(0)"  data-toggle="tooltip" data-status="' . $row->status . '"  data-id="' . $row->id . '" id="published_' . $row->id . '"  class="btn btn-warning box-shadow-3 mb-1 '.$class1.' changeStatus" style="width: 95px">Published</a>
+                        </td>';
                 })
+
 
 
                 ->addColumn('action', function ($row) {
@@ -47,7 +64,7 @@ class ArticleController extends Controller
                     $btn = $btn . ' <td><a href="javascript:void(0)" data-toggle="tooltip"  data-id="' . $row->id . '" data-original-title="حذف" class="danger box-shadow-3 mb-1 deleteArticle" style="width: 80px"><i class="la la-trash font-large-1"></i></a></td>';
                     return $btn;
                 })
-                ->rawColumns(['action', 'tags', 'short_description', 'photo'])
+                ->rawColumns(['action', 'tags', 'short_description', 'status'])
                 ->make(true);
 
         }
@@ -111,7 +128,6 @@ class ArticleController extends Controller
     public function edit($id)
     {
         $article = Article::find($id);
-
         $data = [];
         $data['tags'] = Tag::active()->selection()->get();
 
@@ -123,7 +139,13 @@ class ArticleController extends Controller
         if (!$article)
             return redirect()->route('index.articles')->with($notification);
 
-        return view('admin.article.edit', compact('article'), $data);
+        $article_tags = collect();
+        foreach ($article->tags as $tags){
+            $article_tags []= $tags;
+
+        }
+
+        return view('admin.article.edit', compact('article', 'article_tags'), $data);
     }
 
     public function update($id, ArticleRequest $request)
@@ -179,32 +201,28 @@ class ArticleController extends Controller
         return redirect()->route('index.articles')->with($notification);
     }
 
-//    public function addProductImages($product_id)
-//    {
-//        $product = Product::with('images')->find($product_id);
-//        return view('admin.product.addImages', compact('product'));
-//    }
-
-    public function saveImagesOfArticleInDB(ImageRequest $request)
+    public function changeStatus (Request $request)
     {
-        if ($request->has('images') && count($request->images) > 0) {
-            foreach ($request->images as $image) {
-                Image::create([
-                    'imageable_id' => $request->article_id,
-                    'imageable_type' => 'App\Models\Article',
-                    'photo' => $image
-                ]);
-            }
+        $status = $request->status;
+        $article = Article::where('id', request('article_id'))->first();
+        if ($request->status == 0){
+            $status = 1;
+        }elseif ($request->status == 1) {
+            $status = 0;
         }
 
-        $notification = array(
-            'message' => 'Success add images',
-            'alert-type' => 'success'
-        );
-        return redirect()->route('index.article')->with($notification);
+        $article->where('id', request('article_id'))->update([
+            'status' => $status
+        ]);
 
 
+        return response()->json([
+            'status' => true ,
+            'article_status' => $status ,
+            'msg' => 'Article status updated successfully'
+        ]);
     }
+    
 
     public function saveImagesOfArticleInFolder(Request $request)
     {

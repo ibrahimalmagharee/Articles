@@ -28,7 +28,7 @@ class ArticleRequest extends FormRequest
             'title' => 'required|max:200',
             'slug' => 'required|max:200|unique:tags,slug,' . $this->id,
             'tags' => 'required|array',
-            'tags.*' => 'numeric|exists:tags,id|unique:article_tags,article_id,tag_id' . $this->id,
+            'tags.*' => 'numeric|exists:tags,id',
             'short_description' => 'required|max:300',
             'description' => 'required|max:10000',
             'images' => 'required_without:id',

@@ -2,46 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b9b93c2e-9c15-45b1-a7b0-d7820f993490" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/Dashboard/ChangePasswordRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/factories/ArticleFactory.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/seeds/ArticleDatabaseSeeder.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/admin/images/logo/logo1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/admin/images/logo/logo2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/article/0jT2whQ2yo9a7MBbbQmZ15Xnth1VQM1st3WKHT7G.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/article/BQAkRtPZaRyZSTinkNJJdq3fWly3dJ66EHAk66ln.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/article/XiLUvGfVNXmj2SmpkCqTlSwl68SfmND4u5GWrHNy.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/article/lJ4qBBuNX88i6Oz4DkdLPIW5XIWkRJta7TMI626p.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/article/nVQHX5n1ZnNjbibAilWI5en0KjBAHlJgfE1XUA9Y.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/article/tKINTEUlj7GDYY0m4OjM3OAWwFoYZExgr4ErjiaJ.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/profile/Ia6PJjyC4bA36vu8HWtPXEbqOiRLcMzukuUSlSCE.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/profile/changePassword.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Site/ArticleController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/front/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/front/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/front/css/style1.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/front/img-thumb.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/article/4lzKYdIAjcMgArAxFuMQWz4uMeFdKlOvfGDDVjKM.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/article/HgTx6DaMXipOPPeDGOmuFJsb8hbohFShcFTH9QCk.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/article/aZ9OAgCZFUpHTEUFjimNbFMi5yf3bI7u2nvB37ai.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/site/article.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/site/articleTag.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/site/include/footer.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/site/include/header.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/site/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Exceptions/Handler.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Exceptions/Handler.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/ArticleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/ArticleController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/ProfileController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/ProfileController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/TagController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/TagController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Dashboard/ArticleRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Dashboard/ArticleRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Dashboard/ImageRequest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Dashboard/LoginRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Dashboard/LoginRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Dashboard/ProfileRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Dashboard/ProfileRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Image.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Image.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/admin/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/admin/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/article/eMVrNUDlsEi6Qe4UcDWqYFPSgRd2aZlo3BBv1PQj.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/profile/OXuhIGhDVZQz0vBRECnwP1Xel0MehjA4wDkOpQko.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/article/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/article/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/article/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/article/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/article/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/article/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/auth/login.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/dashboard.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/includes/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/includes/header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/profile/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/profile/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/tag/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/tag/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/admin.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/admin.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/login.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/site.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/site.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -186,7 +164,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/admin/profile" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/site" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -197,11 +175,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\articles\resources\views\site" />
+      <recent name="C:\xampp\htdocs\articles\resources\views\site\include" />
       <recent name="C:\xampp\htdocs\articles\resources\views\admin\profile" />
       <recent name="C:\xampp\htdocs\articles\app\Http\Controllers\Dashboard" />
       <recent name="C:\xampp\htdocs\articles\app\Http\Requests\Dashboard" />
-      <recent name="C:\xampp\htdocs\articles\resources\views\admin\article" />
-      <recent name="C:\xampp\htdocs\articles\resources\views\admin" />
     </key>
   </component>
   <component name="RunManager">
@@ -222,7 +200,9 @@
       <updated>1638184492346</updated>
       <workItem from="1638184496210" duration="29101000" />
       <workItem from="1638266287127" duration="131000" />
-      <workItem from="1638266881377" duration="20291000" />
+      <workItem from="1638266881377" duration="20892000" />
+      <workItem from="1638355957088" duration="3994000" />
+      <workItem from="1638452192070" duration="11520000" />
     </task>
     <servers />
   </component>
@@ -237,6 +217,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1638285272807" />
+    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1638367088368">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1638367088368" />
     <state x="379" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1638267588848">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

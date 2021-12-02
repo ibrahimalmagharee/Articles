@@ -23,8 +23,10 @@ class RedirectIfAuthenticated
                 return redirect(RouteServiceProvider::ADMIN);
 
             }
-            else
+            else{
                 return redirect(RouteServiceProvider::HOME);
+
+            }
         }
 
         return $next($request);

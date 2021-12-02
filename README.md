@@ -1,61 +1,52 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+How to install the application ?
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+1.	Ensure that the Laravel environment is configured. By installing the composer , XAMPP Apache or any type of Apache and git.
 
-## About Laravel
+2.	Open the project's repository from the GitHub through the link: https://github.com/ibrahimalmagharee/Articles.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+3.	Download the project from github or make a git clone for the project and open git cmd and put it in C:/xampp/htdocs and put this command on cmd: 
+git clone https://github.com/ibrahimalmagaree/Articles.git.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+4.	After the download process is completed. Git cmd should be opened, which is the correct path to the project: C:/xampp/htdocs/Articles
+Execute the following steps  : 
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+•	Run this command on git cmd: composer install
+•	Make a copy of the .env.example file and name it .env
+•	Run this command on git cmd: php artisan key:generate
+•	Run this command on git cmd: composer dump-autoload
 
-## Learning Laravel
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+5.	Open the database through the following link: http://localhost/phpmyadmin/
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+6.	Then click on new from the side menu to create a database and name the database in the space provided by the name of articles.
 
-## Laravel Sponsors
+7.	Then we open the .env file and put the name of the database we created in this place: DB_DATABASE=articles
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+8.	Then we run this command on git cmd: php artisan migrate
 
-### Premium Partners
+9.	Then we run this command on git cmd: php artisan db:seed
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[OP.GG](https://op.gg)**
 
-## Contributing
+How to use the application ?
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+1.	Then we run this command on git cmd: php artisan serve. And make sure that apache and mysql are running on xampp.
 
-## Code of Conduct
+2.	Now open your browser and put the following link http://127.0.0.1:8000/
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+3.	After opening the link, a page will appear to display the articles. You can browse articles and view article details by clicking on it.
 
-## Security Vulnerabilities
+4.	And to enter the control panel through the following link: http://127.0.0.1:8000/admin/
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+5.	You can access the panel by entering the email: admin@gmail.com
+And the password: admin123
 
-## License
+6.	After entering the control panel, you can view articles, add articles, edit articles, delete articles, publish and unpublish articles by clicking on articles from the side menu.
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+7.	And, you can view tags, add tags, edit tags, delete tags, activate and deactivate tags by clicking on tags from the side menu.
+
+8.	You can also log out, change profile information and change the password by clicking on the profile picture.
+
+ 
+
+
+

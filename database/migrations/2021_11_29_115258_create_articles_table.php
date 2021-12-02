@@ -20,6 +20,7 @@ class CreateArticlesTable extends Migration
             $table->string('short_description', 300);
             $table->text('description');
             $table->boolean('status');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

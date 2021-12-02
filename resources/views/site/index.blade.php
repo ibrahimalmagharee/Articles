@@ -25,7 +25,7 @@
                                     <div class="article-footer">
                                         @isset($article->tags)
                                             @foreach($article->tags as $tag)
-                                                    <a class="tag m2-2 mt-sm-2 mr-1" href="{{route('articleTags', $tag->slug)}}"> {{$tag->name}}</a>
+                                                    <a class="tag m2-2 mt-sm-2 me-1" href="{{route('articleTags', $tag->slug)}}"> {{$tag->name}}</a>
                                             @endforeach
                                         @endisset
 

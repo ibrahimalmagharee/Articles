@@ -1,19 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b9b93c2e-9c15-45b1-a7b0-d7820f993490" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/assets/images/article/WYXM73qwAjr6VI23w8TKILDj3CwyetMijtnPgeR5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/article/aClB96oOiDPP4DtROIIHppIAhbdebk0acdHB0NRm.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/article/uIShG0wLj6jPmUcCMJjX4HMkndD9fMK59jCOZ17i.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Article.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Article.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Image.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Image.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Tag.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Tag.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_11_29_114432_create_tags_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_11_29_114432_create_tags_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_11_29_115258_create_articles_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_11_29_115258_create_articles_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_11_29_121056_create_article_tags_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_11_29_121056_create_article_tags_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/site/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/site/index.blade.php" afterDir="false" />
-    </list>
+    <list default="true" id="b9b93c2e-9c15-45b1-a7b0-d7820f993490" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -157,7 +145,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/site" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../terzi-ecommerce" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -195,7 +183,7 @@
       <workItem from="1638266287127" duration="131000" />
       <workItem from="1638266881377" duration="20892000" />
       <workItem from="1638355957088" duration="3994000" />
-      <workItem from="1638452192070" duration="13511000" />
+      <workItem from="1638452192070" duration="13658000" />
     </task>
     <servers />
   </component>
@@ -210,10 +198,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1638468189275" />
-    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1638367088368">
+    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1638469469779">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1638367088368" />
+    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1638469469779" />
     <state x="379" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1638267588848">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

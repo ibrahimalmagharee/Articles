@@ -53,6 +53,13 @@
     height: 150px;
 }
 
+.count_article{
+    position: relative;
+    right: 5px;
+    top: -9px;
+
+}
+
 .description {
     max-height: 75px;
     overflow: hidden;

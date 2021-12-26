@@ -11,19 +11,30 @@ class ArticleController extends Controller
 {
     public function index ()
     {
-        $articles = Article::active()->orderBy('id', 'DESC')->get();
-        return view('site.index', compact('articles'));
+       return view('site.index');
+    }
+
+    public function getArticles ()
+    {
+        $articles = Article::with(['images', 'tags'])->active()->orderBy('id', 'DESC')->get();
+        return response()->json([
+            'status' => true,
+            'data' => $articles
+        ]);
     }
 
     public function articleDetails ($slug)
     {
-        $article = Article::where('slug', $slug)->first();
-        return view('site.article', compact('article'));
+        $article = Article::with(['images', 'tags'])->where('slug', $slug)->first();
+        return response()->json([
+            'status' => true,
+            'data' => $article
+        ]);
     }
 
     public function articleTags ($slug)
     {
-        $articles = Article::when($slug, function ($query) use ($slug) {
+        $articles = Article::with(['images', 'tags'])->when($slug, function ($query) use ($slug) {
             return $query->whereHas('tags', function ($query) use ($slug) {
                 $query->where('slug', $slug);
             });
@@ -31,6 +42,10 @@ class ArticleController extends Controller
 
         $tag = Tag::where('slug', $slug)->first();
 
-        return view('site.articleTag', compact('articles', 'tag'));
+        return response()->json([
+            'status' => true,
+            'data' => $articles,
+            'tag' => $tag,
+        ]);
     }
 }

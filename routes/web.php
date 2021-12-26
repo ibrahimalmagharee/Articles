@@ -16,7 +16,9 @@ use Illuminate\Support\Facades\Route;
 Route::group(['namespace' => 'Site'], function () {
 
     Route::get('/', 'ArticleController@index')->name('index');
-    Route::get('/article/{slug}', 'ArticleController@articleDetails')->name('articleDetails');
+   // Route::get('/', 'ArticleController@index')->name('index');
+    //Route::get('/article/{slug}', 'ArticleController@articleDetails')->name('articleDetails');
     Route::get('/tag/{slug}', 'ArticleController@articleTags')->name('articleTags');
+
 
 });
